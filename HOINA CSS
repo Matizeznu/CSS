@@ -1,0 +1,70 @@
+# CSS
+lekcje z css'a
+<html>
+<head>
+	<style>
+		.container{
+			margin:auto auto;
+			width:300px;
+			height:300px;
+		}
+		.small{
+			border: 60px solid transparent;
+			border-bottom-color:green;
+			width:0;
+			height:0;
+			
+		}
+		.medium{
+			border:80px solid transparent;
+			border-bottom-color:green;
+			width:0;
+			height:0;
+		}
+		.large{
+			border:120px solid transparent;
+			border-bottom-color:green;
+			width:0;
+			height:0;
+		}
+		.trunk{
+			width:50px;
+			height:60px;
+			background-color:brown;
+		}
+		.container{
+			position:relative;
+		}
+		.small{
+			position:absolute;
+			bottom:250px;
+			right:15px;
+		}
+		.medium{
+			position:absolute;
+			bottom:190px;
+			right:0px;
+		}
+		.large{
+			position:absolute;
+			bottom:100px;
+			left:100px;
+		
+		}
+		.trunk{
+			position:absolute;
+			bottom:50px;
+			right:50px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="small"></div>
+		<div class="medium"></div>
+		<div class="large"></div>
+		<div class="trunk"></div>
+	</div>
+</body>
+</html>
