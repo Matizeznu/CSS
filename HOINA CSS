@@ -38,7 +38,7 @@ lekcje z css'a
 		.small{
 			position:absolute;
 			bottom:250px;
-			right:15px;
+			right:20px;
 		}
 		.medium{
 			position:absolute;
