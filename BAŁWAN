@@ -1,0 +1,117 @@
+# CSS
+lekcje z css'a
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bałwanek</title>
+	<style>
+
+		.container{
+			position: relative;
+			height: 800px;
+			width: 100%;	
+		}
+		.small{
+	      width: 100px;
+	      height: 100px;
+	      background: white;
+	      border-radius: 50%;
+	      position: absolute;
+	      top:50px;
+	      left:755px;
+		}
+		.medium{
+			width: 200px;
+	      height: 200px;
+	      background: white;
+	      border-radius: 50%;
+	      position: absolute;
+	      top:125px;
+	      left:715px;
+		}
+		.large{
+			width: 300px;
+	      height: 300px;
+	      background: white;
+	      border-radius: 50%;
+	      position: absolute;
+	      top:300px;
+	      left:680px;
+		}
+		.nos{
+		width: 0;
+	      height: 0;
+	      border-top: 20px solid transparent;
+	      border-left: 30px solid orange;
+	      border-bottom: 20px solid transparent;
+	      position: absolute;
+	      top:80px;
+	      left:800px;
+
+		}
+		.czapka{
+	      width: 150px;
+	      height: 50px;
+	      background: black;
+	      position: absolute;
+	      top:20px;
+	      left:735px;
+	      z-index: 5;
+		}
+		.oko{
+			width: 10px;
+	      height: 10px;
+	      background: black;
+	      border-radius: 50%;
+	      position:absolute;
+	      top:75px;
+	      left:780px;
+		}
+		.okoprawe{
+			width: 10px;
+	      height: 10px;
+	      background: black;
+	      border-radius: 50%;
+	      position:absolute;
+	      top:75px;
+	      left:820px;
+		}
+		.patyczek1{
+			width: 20px;
+	      height: 100px;
+	      background: brown;
+	      position: absolute;
+	      top:170px;
+	      left:900px;
+	      z-index: 5;
+	      transform: rotate(45deg)
+		}
+		.patyczek2{
+			width: 20px;
+	      height: 100px;
+	      background: brown;
+	      position: absolute;
+	      top:170px;
+	      left:700px;
+	      z-index: 5;
+	      transform: rotate(-45deg)
+		}
+
+	</style>
+</head>
+<body bgcolor="blue">
+	<div class="container">
+		<div class="small"></div>
+		<div class="medium"></div>
+		<div class="large"></div>
+		<div class="nos"></div>
+		<div class="czapka"></div>
+		<div class="oko"></div>
+		<div class="okoprawe"></div>
+		<div class="patyczek1"></div>
+		<div class="patyczek2"></div>
+	</div>
+
+
+</body>
+</html>
