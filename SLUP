@@ -1,0 +1,139 @@
+# CSS
+lekcje z css'a
+<html>
+<head>
+		<style>
+			@keyframes zmiana_koloru{
+				0%,100% {
+				background-color:lightgreen;
+				}
+				50% {
+				background-color:darkgreen;
+				}
+			}
+			
+			.element2, .element3{
+				animation-name:zmiana_koloru;
+				animation-duration:6s;
+				animation-iteration-count:infinite;
+				animation-delay:3s;
+			}
+			@keyframes zmiana_koloru2{
+				0%,100% {
+				background-color:lightred;
+				}
+				50% {
+				background-color:darkred;
+				}
+			}
+			
+			.element4, .element5{
+				animation-name:zmiana_koloru2;
+				animation-duration:6s;
+				animation-iteration-count:infinite;
+				animation-delay:3s;
+			}
+			
+			
+			.container{
+				height:800px;
+				width:100%;
+				position:relative;
+				box-sizing:border-box;
+				border:4px solid red;
+			}
+			.element1{
+				border:4px solid black;
+				width:100px;
+				height:50px;
+				border-radius:50%;
+				background:grey;
+				position:absolute;
+				top:15px;
+				left:750px;
+				z-index:10
+			}
+			.element2{
+								border:4px solid black;
+				width:100px;
+				height:150px;
+				background:green;
+				z-index:2;
+				position:absolute;
+				top:40px;
+				left:750px;
+				border-bottom:0;
+				
+			}
+			.element3{
+							border:4px solid black;
+				width:100px;
+				height:50px;
+				border-radius:50%;
+				background:green;
+				position:absolute;
+				top:165px;
+				left:750px;
+				z-index:1;
+			}
+			.element4{
+							border:4px solid black;
+				width:100px;
+				height:150px;
+				background:red;
+				z-index:2;
+				position:absolute;
+				top:209px;
+				left:750px;
+				border-bottom:0;
+				
+			}
+			.element5{
+							border:4px solid black;
+				width:100px;
+				height:50px;
+				border-radius:50%;
+				background:red;
+				position:absolute;
+				top:335px;
+				left:750px;
+				z-index:1;
+			}
+			.element6{
+							border:4px solid black;
+				width:50px;
+				height:150px;
+				background:grey;
+				z-index:2;
+				position:absolute;
+				top:385px;
+				left:770px;
+				border-bottom:0;
+			}
+			.element7{
+							border:4px solid black;
+				width:50px;
+				height:15px;
+				border-radius:50%;
+				background:grey;
+				position:absolute;
+				top:525px;
+				left:770px;
+				
+			}
+		
+		</style>
+</head>
+<body>
+	<div class="container">
+		<div class="element1"></div>
+		<div class="element2"></div>
+		<div class="element3"></div>
+		<div class="element4"></div>
+		<div class="element5"></div>
+		<div class="element6"></div>
+		<div class="element7"></div>
+	</div>
+	
+</body>
+</html>
