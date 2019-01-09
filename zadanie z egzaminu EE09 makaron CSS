@@ -1,0 +1,40 @@
+# CSS
+lekcje z css'a
+.banner{
+	background-size:400px;
+	height:200px;
+	background-repeat:repeat;
+	background-image:url("menu.jpg");
+	color:blue;
+}
+.left{
+	height:400px;
+	text-align:center;
+	background-color:rgb(255, 218, 65);
+}
+.mid{
+	margin:
+ 	height:400px;
+	text-align:center;
+	background-color:rgb(255, 226, 100);
+}
+.right{
+	height:400px;
+	text-align:center;
+	background-color:rgb(255, 233, 143);
+}
+.container{
+	display:grid;
+	grid-template-columns:40% 30% 30%;
+}
+.footer{
+	background-color:rgb(255, 218, 65);
+	color:blue;
+	width:100%;
+}
+u{
+	color:green;
+}
+body{
+	background-color:rgb(255, 218, 65);
+}
