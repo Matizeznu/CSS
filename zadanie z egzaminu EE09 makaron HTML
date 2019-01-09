@@ -1,0 +1,22 @@
+# CSS
+lekcje z css'a
+<html>
+<head>
+	<link rel="stylesheet" href="styl14.css">
+	<meta charset="UTF-8">
+	<title>Restauracja Kulinaria.pl</title>
+</head>
+<body>
+	<div class="banner">
+	<h2>Restauracja Kulinaria.pl Zaprasza!</h2>
+	</div>
+	<div class="container">
+		<div class="left"><p>Dania mięsne zamówisz już od 30zł</p><img src="menu.jpg" alt="Pyszne spagheti"><br><u>Pobierz Obraz</u></div>
+		<div class="mid"><h3>Przekąski</h3>9 Owoce morza 20<br><br>10 Grzybki,warzywka,sos 15<br><br>11 Orzechy i chipsy 10<br><br>12 Tatar i jajo 15<br><br>13 Bukiet warzyw 10</div>
+		<div class="right"><h3>Napoje</h3>14 Sok porzeczkowy 3<br><br>15 Cola 3<br><br>16 Woda 2</div>
+	</div>
+	<div class="footer">
+		Stronę internetową opracował:<i>123456</i>
+	</div>
+</body>
+</html>
