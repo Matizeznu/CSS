@@ -32,7 +32,7 @@ lekcje z css'a
 	color:blue;
 	width:100%;
 }
-u{
+a{
 	color:green;
 }
 body{
