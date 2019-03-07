@@ -1,0 +1,42 @@
+<html>
+    <head>
+		<meta charset="utf-8"/>
+        <title>Strona w JS2</title>
+    </head>
+    <body id="body" name="body">
+      
+		Liczba od 1 do 49</br>
+		<script>
+		function gra(){
+			let liczbaU = window.prompt("Podaj ukrytą liczbę!");
+			let liczbaW2 = 0;
+			let liczbaW = ((Math.random()*100)%49)+1;
+			liczbaW2 = liczbaW.toFixed(0);
+			let X = 0;
+			let Y = 3;
+			while(X == 0 && Y != 1){
+				if(liczbaW2 == liczbaU){
+					window.alert("Brawo!",liczbaU," to ukryta liczba!");
+					X++;
+				}
+				else{
+					if(liczbaW2 > liczbaU){
+						Y--;
+						liczbaU = window.prompt("Podaj większą ukrytą liczbę! Zostało "+Y+" żyć");
+					}
+					else{
+						Y--;
+						liczbaU = window.prompt("Podaj mniejszą ukrytą liczbę! Zostało "+Y+" żyć");
+					}
+				}
+			}
+			if(Y == 1){
+				window.alert("Przegrałeś!")
+			}
+			return 0;
+		}
+		</script>
+		<button onclick="gra()">Zagraj</button>
+    </body>
+</html>
+
