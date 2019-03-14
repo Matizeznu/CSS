@@ -1,0 +1,221 @@
+# CSS
+lekcje z css'a
+zadania
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIMER W JS</title>
+	<script>
+	
+		//zadanie 2
+		var start=0
+		function dodaLiczby(){
+		
+		if (start==20){clearTimeout(frot)};
+		var akapit=document.getElementById("akapit");
+		akapit.innerHTML+= start + "<br>";
+		start++;
+			
+		}
+		
+		var frot =setInterval(dodaLiczby,200);
+		
+		//zadanie 3
+		
+		var li_1 = document.createElement("li");
+		var li_2 = document.createElement("li");
+		var li_3 = document.createElement("li");
+		
+		li_1.textContent = "Piotr Kowalski";
+		li_2.textContent = "Adam Nowak";
+		li_3.textContent = "Monika Kowalska";
+		
+		list.appendChild(li_1);
+		list.appendChild(li_2);
+		list.appendChild(li_3);
+		
+		body.appendChild(h1);
+		body.appendChild(list);
+		
+		li_1.style.color = "red";
+		li_2.style.backgroundcolor = "yellow";
+		li_3.style.fontSize= "30px";
+		
+		//zadanie 4 
+		
+		function getColor()	{
+		var r = parseInt(Math.random()*255)%255;
+		var g = parseInt(Math.random()*255)%255;
+		var b = parseInt(Math.random()*255)%255;
+		
+		return `rgb(${r},${g},${b})`;
+		
+		
+		}
+		function nadajKolor(){
+			var el =document.getElementById("blok");
+			el.style.backgroundColor = getColor();
+		}
+		
+		setInterval( nadajKolor ,100);
+		
+		//zadanie 5 (dodatek do 4)
+		
+		var max_rozmiar = 500;
+		var min_rozmiar = 10;
+		var aktualny = 500;
+		
+		var dodawanie=false;
+		
+		function getNewValue(){
+			if(dodawanie) {
+				aktualny += 1;
+			}
+			else {
+				aktualny -=1;
+			}
+			if(aktualny >= max_rozmiar || min_rozmiar >= aktualny) {
+				dodawanie = !dodawanie;
+			}
+			return aktualny;
+		}
+		function zmienRozmiar(){
+			var el= document.getElementById("blok");
+			var value= getNewValue() + 'px';
+			console.log(value);
+			el.style.width = value;
+			el.style.height = value;
+
+		}
+		setInterval(zmienRozmiar,100);
+		
+		//zadanie 6 timer
+		
+		var timer= 300;
+		
+		fuction formatujCzas(){
+			//HH::MM::ss
+			var h=timer / (60*60);
+			var m=timer parseInt(timer/60);
+			var s = timer % 60;
+			
+			return `${h}:${m}:${s}`
+		}
+		
+		function wyswietlCzas(){
+			var el= document.getElementById("timer");
+			el.innerHTML = formatujCzas();
+			timer -= 1;
+		}
+		setInterval(wyswietlCzas,1000);
+	</script>
+</head>
+
+<body>
+	
+	<p id="akapit"></p>
+	<div id="timer"> </div>
+	<div id="blok" style="border:1px solid red;width:300px;height:300px;"> TEST </div>
+	
+	
+</body>
+</html>
+
+zadania 2 (zmiana koloru)
+
+<html>
+<head>
+	<script>
+		function getColor()	{
+		var r = parseInt(Math.random()*255)%255;
+		var g = parseInt(Math.random()*255)%255;
+		var b = parseInt(Math.random()*255)%255;
+		
+		return `rgb(${r},${g},${b})`;
+		
+		
+		}
+		function nadajKolor(){
+			var el =document.getElementById("blok");
+			el.style.backgroundColor = getColor();
+		}
+		
+		setInterval( nadajKolor ,500);
+		
+		var max_rozmiar= 5000;
+		var min_rozmiar=10;
+		var aktualny =5000;
+		
+		var dodawanie=false;
+		
+		function getNewValue(){
+			if(dodawanie) {
+				aktualny += 1;
+			}
+			else {
+				aktualny -=1;
+			}
+			if(aktualny >= max_rozmiar || min_rozmiar >= aktualny) {
+				dodawanie = !dodawanie;
+			}
+			return aktualny;
+		}
+		function zmienRozmiar(){
+			var el= document.getElementById("blok");
+			var value= getNewValue() + 'px';
+			console.log(value);
+			el.style.width = value;
+			el.style.height = value;
+
+		}
+		setInterval(zmienRozmiar,10);
+		
+		
+		
+	</script>
+</head>
+
+<body>
+
+<div id="blok" style="border:1px solid red;width:300px;height:300px;"> TEST </div>
+
+</body>
+
+</html>
+
+zadania 3 (timer)
+
+<html>
+<head>
+	<script>
+		
+		var timer= 300;
+		
+		fuction formatujCzas(){
+			//HH::MM::ss
+			var h=Math.floor(timer / (60*60));
+			var m=Math.floor(timer/60)%60;
+			var s = timer % 60;
+			
+			return `${h}:${m}:${s}`
+		}
+		
+		function wyswietlCzas(){
+			var el= document.getElementById("timer");
+			el.innerHTML = formatujCzas();
+			timer -= 1;
+		}
+		setInterval(wyswietlCzas,1000);
+		
+		
+	</script>
+</head>
+
+<body>
+
+<div >  </div>
+
+</body>
+
+</html>
