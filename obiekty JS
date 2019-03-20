@@ -1,0 +1,92 @@
+krokodyle 1
+<html lang="pl">
+ <head>
+	<meta charset="UTF-8"/>
+	
+	
+ </head>
+ <body>
+ <div id="gang"> </div>
+ <img id="image" > </img>
+ 
+ <script>
+	var obrazy = [
+		"https://gazetalekarska.pl/wp-content/uploads/2017/02/marta-sienkiewicz-dentysta-stomatolog-orl-lublin.jpg",
+		"https://dinoanimals.pl/wp-content/uploads/2016/03/Krokodyl_syjamski-5.jpg"
+		
+	]
+	
+	var krokodyl1 ={
+		wiek: 15,
+		dlugosc: 2,
+		spi: false,
+		kolor: "zielony",
+		wyswietl : function(){
+			var el= document.getElementById("gang");
+			el.innerHTML = `wiek: ${this.wiek}`;
+			el.innerHTML += `dlugosc: ${this.dlugosc}`;
+			el.innerHTML +=	`spi: ${this.spi}`;
+			var img = document.getElementById("image");
+			if(this.spi == true) {
+				img.src = obrazy[0];
+			} else {
+				img.src = obrazy[1];
+			}
+		},
+		spij : function(){
+			this.spi = true;
+			this.wyswietl();
+			var x = this;
+			setTimeout(function(){
+				x.obudz_sie();
+			}, 1500);
+		},
+		obudz_sie: function(){
+			this.spi = false;
+			this.wyswietl();
+		}
+	}
+		krokodyl1.spij();
+		
+	</script>
+ </body>
+ 
+ </html>
+ 
+ zadanie 1 obiekt
+ 
+ <html>
+
+<head>
+
+</head>
+
+<body>
+
+<div id="id"> </div>
+
+<script>
+	var book1= {
+		title:"Pan Tadeusz",
+		author:"Adam Mickiewicz",
+		pages:300,
+		publisher:"nieznany",
+		print : function(){
+			var element = document.getElementById("id");
+			element.innerHTML = `<br>Tytul: ${this.title}`;
+			element.innerHTML += `<br>Autor: ${this.author}`;
+			element.innerHTML += `<br>Strony: ${this.pages}`;
+			element.innerHTML += `<br>Wydawca: ${this.publisher}`;
+		}
+	}
+	book1.print();
+	
+	
+</script>
+
+</body>
+
+</html>
+
+zadanie2
+dodać 2 książki
