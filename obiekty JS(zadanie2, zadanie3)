@@ -1,0 +1,139 @@
+# CSS
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<div id="id"> </div>
+
+<script>
+	var book1= {
+		title:"Pan Tadeusz",
+		author:"Adam Mickiewicz",
+		pages:300,
+		publisher:"nieznany",
+		print : function(root){
+			var lista= document.createElement("ol");
+			var title= document.createElement("li");
+			title.textContent= this.title;
+			lista.append(title);
+			var author = document.createElement("li");
+			author.textContent= this.author;
+			lista.append(author);
+			var pages = document.createElement("li");
+			pages.textContent= this.pages;
+			lista.append(pages);
+			var publisher = document.createElement("li");
+			publisher.textContent = this.publisher;
+			lista.append(publisher);
+			root.append(lista);
+			
+		}
+	}
+		var book2= {
+		title:"Diablica",
+		author:"Diabel",
+		pages:666,
+		publisher:"pieklo",
+		print: function(root){
+			var lista= document.createElement("ol");
+			var title= document.createElement("li");
+			title.textContent= this.title;
+			lista.append(title);
+			var author = document.createElement("li");
+			author.textContent= this.author;
+			lista.append(author);
+			var pages = document.createElement("li");
+			pages.textContent= this.pages;
+			lista.append(pages);
+			var publisher = document.createElement("li");
+			publisher.textContent = this.publisher;
+			lista.append(publisher);
+			root.append(lista);
+		}
+	}	
+		var book3={
+		title:"ABCD",
+		author:"Taco Hemingway",
+		pages:69,
+		publisher:"polska policja",
+		print: function(root){
+		var lista= document.createElement("ol");
+			var title= document.createElement("li");
+			title.textContent= this.title;
+			lista.append(title);
+			var author = document.createElement("li");
+			author.textContent= this.author;
+			lista.append(author);
+			var pages = document.createElement("li");
+			pages.textContent= this.pages;
+			lista.append(pages);
+			var publisher = document.createElement("li");
+			publisher.textContent = this.publisher;
+			lista.append(publisher);
+			root.append(lista);
+			
+		}
+	}
+		
+		
+		let root = document.body;
+		var books= [book1, book2, book3];
+		for(i= 0; i<3 ;i++){
+			var b= books[i];
+			b.print(root);
+		}
+	
+</script>
+
+</body>
+
+</html>
+
+zadanie 3 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<div id="id"> </div>
+
+<script>
+	var zagroda= {
+		zwierzeta : [
+		{	
+			gatunek : "koza",
+			kolor: "czarny",
+			wiek: 3
+		},
+		{	
+			gatunek: "kon",
+			kolor: "bialy",
+			wiek: 5
+		},
+		],
+		print : function(){
+		for(i=0; i<this.zwierzeta.length;i++){
+			let zwierze = this.zwierzeta[i];
+			var lista = document.createElement("ul");
+			var gatunek = document.createElement("li");
+			gatunek.textContent = `${zwierze.gatunek}; wiek ${zwierze.wiek}`;
+			lista.append(gatunek);
+			root.append(lista);
+		}
+		}
+	}
+		zagroda.print(document.body);
+	
+</script>
+
+</body>
+
+</html>
